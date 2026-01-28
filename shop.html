@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Magični Ubrusi — Shop</title>
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+
+<body>
+<!-- SEARCH MODAL -->
+ 
+<header class="header" id="mainHeader">
+  <div class="header-inner">
+    <div class="nav-left">
+  <a href="shop.html">Prodavnica</a>
+
+  <div class="header-search-wrapper">
+    <input
+      type="text"
+      id="searchInput"
+      class="header-search"
+      placeholder="Pretraži proizvode…"
+      autocomplete="off"
+    />
+    <div class="search-dropdown" id="searchResults"></div>
+  </div>
+</div>
+
+
+    <div class="logo">
+      <a href="index.html">MU</a>
+    </div>
+
+    <div class="nav-right">
+      <a href="#">Nalog</a>
+      <a href="#"> EUR</a>
+      <a href="cart.html" id="cartCount">Korpa (0)</a>
+    </div>
+  </div>
+</header>
+
+
+<section class="shop-intro">
+  <div class="intro-inner">
+
+    <span class="eyebrow">Magični Ubrusi</span>
+
+    <h1>
+      Manje nereda. <br>
+      Više sjaja.
+    </h1>
+
+    <p class="lead">
+      Svaki potez ima smisla.
+    </p>
+
+    <p class="description">
+      Naši premium mikrofiber proizvodi dizajnirani su za svakodnevni život —
+      elegantni, izdržljivi i stvoreni da traju.
+      Bez kompromisa. Bez bacanja.
+      <strong>Samo čista perfekcija.</strong>
+    </p>
+
+  </div>
+</section>
+
+<div class="section-divider">
+  <span>Naši proizvodi</span>
+</div>
+
+
+<!-- PRODUCTS -->
+<section class="products">
+
+  <div class="product"
+    data-name="Blue Microfiber Roll"
+    data-price="6.90"
+    data-image="images/bluerollbestpic.jpg"
+    data-description="Premium blue microfiber roll. Highly absorbent, streak-free, and reusable for everyday cleaning.">
+    <img src="images/bluerollbestpic.jpg" alt="">
+    <h3>Plavi Mikrofiber Rolo</h3>
+    <p class="tagline">Čistina koja se vidi</p>
+    <p class="price">6.90</p>
+  </div>
+
+  <div class="product"
+    data-name="Dark Blue Microfiber Roll"
+    data-price="6.90"
+    data-image="images/darkbluerollbestgpic.jpg"
+    data-description="Deep blue microfiber roll designed for durability and powerful absorption.">
+    <img src="images/darkbluerollbestgpic.jpg" alt="">
+    <h3>Tamno Plavi Rolo</h3>
+    <p class="tagline">Snaga u svakom vlaknu</p>
+    <p class="price">6.90</p>
+  </div>
+
+  <div class="product"
+    data-name="Green Microfiber Roll"
+    data-price="6.90"
+    data-image="images/greenroll.jpg"
+    data-description="Ultra-absorbent green microfiber roll. Soft, reusable, and perfect for all surfaces.">
+    <img src="images/greenroll.jpg" alt="">
+    <h3>Zeleni Mikrofiber Rolo</h3>
+    <p class="tagline">Sve površine. Jedan izbor.</p>
+    <p class="price">6.90</p>
+  </div>
+
+  <div class="product"
+    data-name="Grey Microfiber Roll"
+    data-price="6.90"
+    data-image="images/greyroll.jpg"
+    data-description="Neutral grey microfiber roll for modern homes. Strong, lint-free, and long-lasting.">
+    <img src="images/greyroll.jpg" alt="">
+    <h3>Sivi Mikrofiber Rolo</h3>
+    <p class="tagline">Minimalizam koji radi</p>
+    <p class="price">6.90</p>
+  </div>
+
+  <div class="product"
+    data-name="Orange Microfiber Roll"
+    data-price="6.90"
+    data-image="images/oraangeroll.jpg"
+    data-description="Bright orange microfiber roll that combines performance with visibility.">
+    <img src="images/oraangeroll.jpg" alt="">
+    <h3>Narandžasti Rolo</h3>
+    <p class="tagline">Vidljiv. Pouzdan. Efikasan.</p>
+    <p class="price">6.90</p>
+  </div>
+
+  <div class="product"
+    data-name="Standard Microfiber Roll"
+    data-price="5.90"
+    data-image="images/microfiberroll.jpeg"
+    data-description="Classic microfiber roll for everyday use. Lightweight, absorbent, and reusable.">
+    <img src="images/microfiberroll.jpeg" alt="">
+    <h3>Klasični Mikrofiber Rolo</h3>
+    <p class="tagline">Osnova svake čiste kuće</p>
+    <p class="price">5.90</p>
+  </div>
+
+  <div class="product"
+    data-name="Microfiber Towel"
+    data-price="4.90"
+    data-image="images/microfibertowel.jpeg"
+    data-description="Soft microfiber towel designed for gentle yet effective cleaning.">
+    <img src="images/microfibertowel.jpeg" alt="">
+    <h3>Mikrofiber Peškir</h3>
+    <p class="tagline">Nežan dodir. Savršen rezultat.</p>
+    <p class="price">4.90</p>
+  </div>
+
+  <div class="product"
+    data-name="Triple Roll Deal"
+    data-price="16.90"
+    data-image="images/blueblackgreentriplerolldeal.jpg"
+    data-description="Three premium microfiber rolls bundled together for maximum value.">
+    <img src="images/blueblackgreentriplerolldeal.jpg" alt="">
+    <h3>Triple Rolo Paket</h3>
+    <p class="tagline">Više boja. Više mogućnosti.</p>
+    <p class="price">16.90</p>
+  </div>
+
+  <div class="product"
+    data-name="Blue & Orange Double Deal"
+    data-price="11.90"
+    data-image="images/blueorangerolldoubledeal.jpg"
+    data-description="Two-color microfiber roll bundle combining performance and versatility.">
+    <img src="images/blueorangerolldoubledeal.jpg" alt="">
+    <h3>Plavo & Narandžasto — Duo Paket</h3>
+    <p class="tagline">Savršena ravnoteža</p>
+    <p class="price">11.90</p>
+  </div>
+
+  <div class="product"
+    data-name="Blue & Black Double Deal"
+    data-price="11.90"
+    data-image="images/bloeandblackrolldoubledeal.jpg"
+    data-description="Bold blue and black microfiber rolls for heavy-duty cleaning.">
+    <img src="images/bloeandblackrolldoubledeal.jpg" alt="">
+    <h3>Plavo & Crno — Duo Paket</h3>
+    <p class="tagline">Ozbiljna čistoća</p>
+    <p class="price">11.90</p>
+  </div>
+
+  <div class="product"
+    data-name="Grey Double Deal"
+    data-price="11.90"
+    data-image="images/greyrolbetterpicdoubledeal.jpg"
+    data-description="Minimalist grey microfiber roll bundle for clean, modern spaces.">
+    <img src="images/greyrolbetterpicdoubledeal.jpg" alt="">
+    <h3>Sivi Duo Paket</h3>
+    <p class="tagline">Tiha elegancija</p>
+    <p class="price">11.90</p>
+  </div>
+
+  <div class="product"
+    data-name="Color Combo Deal"
+    data-price="17.90"
+    data-image="images/whitegreenredrolldeal.jpg"
+    data-description="Multi-color microfiber roll set designed for every room and surface.">
+    <img src="images/whitegreenredrolldeal.jpg" alt="">
+    <h3>Color Combo Paket</h3>
+    <p class="tagline">Jedan set. Ceo dom.</p>
+    <p class="price">17.90</p>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-columns">
+
+    <div>
+      <h4>Magični Ubrusi</h4>
+      <p>
+        Dizajnirani za moderan život.  
+        Održivi. Elegantni. Efikasni.
+      </p>
+    </div>
+
+    <div>
+      <h4>Navigacija</h4>
+      <a href="shop.html">Prodavnica</a>
+      <a href="about.html">O nama</a>
+      <a href="support.html">Podrška</a>
+    </div>
+
+    <div>
+      <h4>Podrška</h4>
+      <a href="#">Dostava</a>
+      <a href="#">Povraćaj</a>
+      <a href="#">Kontakt</a>
+    </div>
+
+    <div>
+      <h4>Pravno</h4>
+      <a href="#">Politika privatnosti</a>
+      <a href="#">Uslovi korišćenja</a>
+    </div>
+
+  </div>
+</footer>
+
+<!-- PRODUCT MODAL -->
+<div class="product-modal" id="productModal">
+  <div class="modal-overlay"></div>
+
+  <div class="modal-content">
+    <button class="modal-close">&times;</button>
+
+    <div class="modal-image">
+      <img id="modalImage" alt="">
+    </div>
+
+    <div class="modal-info">
+      <h2 id="modalName"></h2>
+      <p class="price" id="modalPrice"></p>
+
+      <p class="description" id="modalDescription"></p>
+
+      <select>
+        <option>1 komad</option>
+        <option>3 komada</option>
+        <option>6 komada</option>
+      </select>
+
+      <button class="cart-btn">
+            Dodaj u korpu →
+        </button>
+
+
+    </div>
+  </div>
+</div>
+
+<!-- MODAL SCRIPT -->
+<script>
+const modal = document.getElementById("productModal");
+const cartBtn = document.querySelector(".cart-btn");
+
+const modalImage = document.getElementById("modalImage");
+const modalName = document.getElementById("modalName");
+const modalPrice = document.getElementById("modalPrice");
+const modalDescription = document.getElementById("modalDescription");
+
+document.querySelectorAll(".product").forEach(product => {
+  product.addEventListener("click", () => {
+    modalImage.src = product.dataset.image;
+    modalName.textContent = product.dataset.name;
+    modalPrice.textContent = product.dataset.price;
+    
+    modalDescription.textContent = product.dataset.description;
+
+    cartBtn.dataset.name = product.dataset.name;
+    cartBtn.dataset.price = product.dataset.price;
+    cartBtn.dataset.image = product.dataset.image;
+
+
+    modal.classList.add("active");
+    document.body.style.overflow = "hidden";
+    modalOpen = true;
+    cartBtn.textContent = "Dodaj u korpu →";
+  });
+});
+
+const closeModal = () => {
+  modal.classList.remove("active");
+  document.body.style.overflow = "";
+  modalOpen = false;
+  header.style.transform = "translateY(0)";
+
+};
+
+document.querySelector(".modal-close").onclick = closeModal;
+document.querySelector(".modal-overlay").onclick = closeModal;
+</script>
+
+
+<!-- HEADER SCROLL -->
+<script>
+let lastScroll = 0;
+let modalOpen = false;
+
+const header = document.getElementById("mainHeader");
+
+window.addEventListener("scroll", () => {
+  if (modalOpen) return; // ⛔ header miruje dok je modal otvoren
+
+  const currentScroll = window.scrollY;
+
+  if (currentScroll > lastScroll && currentScroll > 120) {
+    header.style.transform = "translateY(-100%)";
+  } else {
+    header.style.transform = "translateY(0)";
+  }
+
+  lastScroll = currentScroll;
+});
+</script>
+
+<script>
+const CART_KEY = "mu_cart";
+
+/* UČITAJ KORPU */
+function getCart() {
+  return JSON.parse(localStorage.getItem(CART_KEY)) || [];
+}
+
+/* SAČUVAJ KORPU */
+function saveCart(cart) {
+  localStorage.setItem(CART_KEY, JSON.stringify(cart));
+  updateCartCount();
+}
+
+/* DODAJ U KORPU */
+function addToCart(name, price, image, qty = 1) {
+  const cart = getCart();
+  const existing = cart.find(item => item.name === name);
+
+  if (existing) {
+    existing.qty += qty;
+  } else {
+    cart.push({ name, price, image, qty });
+  }
+
+  saveCart(cart);
+}
+
+const searchInput = document.getElementById("searchInput");
+const searchResults = document.getElementById("searchResults");
+const products = document.querySelectorAll(".product");
+
+searchInput.addEventListener("input", () => {
+  const query = searchInput.value.toLowerCase().trim();
+  searchResults.innerHTML = "";
+
+  if (!query) {
+    searchResults.classList.remove("active");
+    return;
+  }
+
+  let found = false;
+
+  products.forEach(product => {
+    const name = product.dataset.name.toLowerCase();
+    const description = product.dataset.description.toLowerCase();
+
+    if (name.includes(query) || description.includes(query)) {
+      found = true;
+
+      const result = document.createElement("div");
+      result.className = "search-result";
+      result.innerHTML = `
+        <img src="${product.dataset.image}">
+        <span>${product.dataset.name}</span>
+      `;
+
+      result.addEventListener("click", () => {
+        searchInput.value = "";
+        searchResults.classList.remove("active");
+        product.click(); // opens product modal
+      });
+
+      searchResults.appendChild(result);
+    }
+  });
+
+  if (!found) {
+    searchResults.innerHTML = `<p class="no-results">Nema rezultata.</p>`;
+  }
+
+  searchResults.classList.add("active");
+});
+
+/* Close dropdown when clicking outside */
+document.addEventListener("click", e => {
+  if (!e.target.closest(".header-search-wrapper")) {
+    searchResults.classList.remove("active");
+  }
+});
+
+
+/* BROJ U HEADERU */
+function updateCartCount() {
+  const cart = getCart();
+  const total = cart.reduce((sum, item) => sum + item.qty, 0);
+  const el = document.getElementById("cartCount");
+  if (el) el.textContent = `Korpa (${total})`;
+}
+
+/* INIT */
+updateCartCount();
+</script>
+
+<script>
+document.querySelectorAll(".cart-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const name = btn.dataset.name;
+    const price = parseFloat(btn.dataset.price);
+    const image = btn.dataset.image;
+
+
+    addToCart(name, price, image, 1);
+
+    btn.textContent = "Dodato ✓";
+    setTimeout(() => btn.textContent = "Dodaj u korpu →", 1200);
+  });
+});
+</script>
+
+
+
+</body>
+</html>
+

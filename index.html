@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magični Ubrusi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="home">
+
+
+<header class="header" id="mainHeader">
+  <div class="header-inner">
+    <div class="nav-left">
+      <a href="shop.html">Prodavnica</a>
+      <input
+  type="text"
+  id="shopSearch"
+  placeholder="Pretraži proizvode…"
+  class="shop-search"
+/>
+
+    </div>
+
+    <div class="logo">
+      <a href="index.html">MU</a>
+    </div>
+
+    <div class="nav-right">
+      <a href="#">Nalog</a>
+      <a href="#"> EUR</a>
+      <a href="cart.html" id="cartCount">Korpa (0)</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="home-hero">
+  <img class="hero-bg" src="images/5rolldealjpg.jpg" alt="">
+  
+  <div class="hero-inner">
+    <span class="eyebrow">Magični Ubrusi</span>
+    <h1>Čistoća, svedena na suštinu.</h1>
+    <p class="hero-lead">
+      Jedan alat. Bez kompromisa. Bez nereda.
+    </p>
+    <a href="shop.html" class="hero-cta">Uđi u prodavnicu →</a>
+  </div>
+</section>
+
+
+
+ <section class="split-section">
+  <div class="split-grid">
+    <div class="split-image">
+      <img src="images/greenroll.jpg" alt="Zeleni magični ubrus">
+    </div>
+
+    <div class="split-text">
+      <span class="eyebrow">Materijal</span>
+      <h2>Jedna krpa.<br>Bez granica.</h2>
+      <p>
+        Dizajnirana da zameni papir, sunđere i hemiju.
+        Mikrofiber koji čisti vodom — i traje godinama.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="split-section alt">
+  <div class="split-grid">
+    <div class="split-text">
+      <span class="eyebrow">Upotreba</span>
+      <h2>Vidljivo čista.<br>Na dodir.</h2>
+      <p>
+        Bez tragova. Bez vlakana.
+        Samo površine koje izgledaju kao da su nove.
+      </p>
+    </div>
+
+    <div class="split-image">
+      <img src="images/bluerollbestpic.jpg" alt="Plavi magični ubrus">
+    </div>
+  </div>
+</section>
+
+ <!-- PHILOSOPHY -->
+  <section class="home-philosophy">
+  <div class="philosophy-inner">
+    <span class="eyebrow">Naša filozofija</span>
+    <h2>Manje stvari. Više smisla.</h2>
+
+    <p>
+      Većina proizvoda za čišćenje je dizajnirana da se sakrije.
+      Mi verujemo u suprotno.
+    </p>
+
+    <p>
+      Naša mikrofiber krpa nije potrošna roba — to je alat.
+      Periva, trajna i napravljena da zameni desetine jednokratnih alternativa.
+    </p>
+
+    <p class="philosophy-strong">
+      Bez šarenih etiketa. Bez pretvaranja.
+    </p>
+  </div>
+</section>
+
+
+<section class="home-shop-link">
+  <h2>Spremni kada vi jeste.</h2>
+  <a href="shop.html" class="hero-cta">Pogledaj proizvode →</a>
+</section>
+
+</main>
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-columns">
+
+    <div>
+      <h4>Magični Ubrusi</h4>
+      <p>
+        Dizajnirani za moderan život.  
+        Održivi. Elegantni. Efikasni.
+      </p>
+    </div>
+
+    <div>
+      <h4>Navigacija</h4>
+      <a href="shop.html">Prodavnica</a>
+      <a href="about.html">O nama</a>
+      <a href="support.html">Podrška</a>
+    </div>
+
+    <div>
+      <h4>Podrška</h4>
+      <a href="#">Dostava</a>
+      <a href="#">Povraćaj</a>
+      <a href="#">Kontakt</a>
+    </div>
+
+    <div>
+      <h4>Pravno</h4>
+      <a href="#">Politika privatnosti</a>
+      <a href="#">Uslovi korišćenja</a>
+    </div>
+
+  </div>
+</footer>
+<script>
+let lastScroll = 0;
+let modalOpen = false;
+
+const header = document.getElementById("mainHeader");
+const modal = document.getElementById("productModal");
+
+window.addEventListener("scroll", () => {
+  if (modalOpen) return; // ⛔ header miruje dok je modal otvoren
+
+  const currentScroll = window.scrollY;
+
+  if (currentScroll > lastScroll && currentScroll > 120) {
+    header.style.transform = "translateY(-100%)";
+  } else {
+    header.style.transform = "translateY(0)";
+  }
+
+  lastScroll = currentScroll;
+});
+</script>
+
+<script>
+const CART_KEY = "mu_cart";
+
+function getCart() {
+  return JSON.parse(localStorage.getItem(CART_KEY)) || [];
+}
+
+function updateCartCount() {
+  const cart = getCart();
+  const total = cart.reduce((sum, item) => sum + item.qty, 0);
+  const el = document.getElementById("cartCount");
+  if (el) el.textContent = `Korpa (${total})`;
+}
+
+updateCartCount();
+</script>
+
+
+
+</body>
+</html>
+

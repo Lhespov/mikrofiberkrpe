@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Magični Ubrusi — Shop</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<header class="header" id="mainHeader">
+  <div class="header-inner">
+    <div class="nav-left">
+      <a href="shop.html">Prodavnica</a>
+      <input
+  type="text"
+  id="shopSearch"
+  placeholder="Pretraži proizvode…"
+  class="shop-search"
+/>
+
+    </div>
+
+    <div class="logo">
+      <a href="index.html">MU</a>
+    </div>
+
+    <div class="nav-right">
+      <a href="#">Nalog</a>
+      <a href="#"> EUR</a>
+      <a href="cart.html" id="cartCount">Korpa (0)</a>
+    </div>
+  </div>
+</header>
+
+<main class="cart-page">
+
+  <h1>Vaša korpa</h1>
+
+  <div id="cartItems" class="cart-items"></div>
+
+  <div class="cart-summary">
+    <span>Ukupno</span>
+    <strong id="cartTotal">€0.00</strong>
+  </div>
+
+  <a href="#" class="checkout-btn">
+    Nastavi ka plaćanju →
+  </a>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-columns">
+
+    <div>
+      <h4>Magični Ubrusi</h4>
+      <p>
+        Dizajnirani za moderan život.  
+        Održivi. Elegantni. Efikasni.
+      </p>
+    </div>
+
+    <div>
+      <h4>Navigacija</h4>
+      <a href="shop.html">Prodavnica</a>
+      <a href="about.html">O nama</a>
+      <a href="support.html">Podrška</a>
+    </div>
+
+    <div>
+      <h4>Podrška</h4>
+      <a href="#">Dostava</a>
+      <a href="#">Povraćaj</a>
+      <a href="#">Kontakt</a>
+    </div>
+
+    <div>
+      <h4>Pravno</h4>
+      <a href="#">Politika privatnosti</a>
+      <a href="#">Uslovi korišćenja</a>
+    </div>
+
+  </div>
+</footer>
+
+
+
+<script src="cart.js"></script>
+
+<script>
+/* ================= CART PAGE ================= */
+function renderCartPage() {
+  const cartItemsEl = document.getElementById("cartItems");
+  const cartTotalEl = document.getElementById("cartTotal");
+  if (!cartItemsEl || !cartTotalEl) return;
+
+  const cart = getCart();
+  cartItemsEl.innerHTML = "";
+
+  if (cart.length === 0) {
+    cartItemsEl.innerHTML = "<p class='empty-cart'>Korpa je prazna.</p>";
+    cartTotalEl.textContent = "€0.00";
+    return;
+  }
+
+  let total = 0;
+
+  cart.forEach((item, index) => {
+    const rowTotal = item.price * item.qty;
+    total += rowTotal;
+
+    const row = document.createElement("div");
+    row.className = "cart-row";
+    row.innerHTML = `
+      <div class="cart-left">
+        <img src="${item.image}" class="cart-thumb" alt="">
+        <div class="cart-info">
+          <strong>${item.name}</strong>
+          <span>${item.qty} × €${item.price.toFixed(2)}</span>
+        </div>
+      </div>
+
+      <div class="cart-actions">
+        <span>€${rowTotal.toFixed(2)}</span>
+        <button onclick="removeFromCart(${index})">✕</button>
+      </div>
+    `;
+    cartItemsEl.appendChild(row);
+  });
+
+  cartTotalEl.textContent = `€${total.toFixed(2)}`;
+}
+
+function removeFromCart(index) {
+  const cart = getCart();
+  cart.splice(index, 1);
+  saveCart(cart);
+  renderCartPage();
+}
+
+/* INIT */
+renderCartPage();
+</script>
+<script src="cart.js"></script>
+
+
+</body>
+</html>
+

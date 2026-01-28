@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Microfiber Co.</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<script>
+  const header = document.getElementById("mainHeader");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 80) {
+      header.style.top = "0";
+    } else {
+      header.style.top = "-100px";
+    }
+  });
+</script>
+
+<footer class="footer">
+  <div class="footer-columns">
+    <div>
+      <h4>Magični Ubrusi</h4>
+      <p>Premium microfiber solutions for modern homes.</p>
+    </div>
+
+    <div>
+      <h4>Navigation</h4>
+      <a href="shop.html">Shop</a>
+      <a href="about.html">About</a>
+      <a href="support.html">Support</a>
+    </div>
+
+    <div>
+      <h4>Support</h4>
+      <a href="#">Shipping</a>
+      <a href="#">Returns</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <div>
+      <h4>Legal</h4>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms</a>
+    </div>
+  </div>
+</footer>
+
+
+<body>
+
+<header class="header" id="mainHeader">
+  <div class="nav-left">
+    <a href="shop.html">Shop</a>
+    <a href="#">Search</a>
+  </div>
+
+  <div class="logo">
+    <a href="index.html">MU</a>
+  </div>
+
+  <div class="nav-right">
+    <a href="#">Account</a>
+    <a href="#">€ EUR</a>
+    <a href="cart.html">Cart (0)</a>
+  </div>
+</header>
+
+
+
+</body>
+</html>
